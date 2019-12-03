@@ -25,7 +25,7 @@ RUN set -xe && \
     composer clear-cache
 
 # Install Node.js (needed for Vapor's NPM Build)
-RUN apk add --update nodejs npm
+RUN apk add --update nodejs npm yarn
 
 # Prepare out Entrypoint (used to run Vapor commands)
 COPY vapor-entrypoint /usr/local/bin/vapor-entrypoint
