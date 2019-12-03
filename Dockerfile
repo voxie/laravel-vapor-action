@@ -1,4 +1,4 @@
-FROM composer:latest
+FROM php:7.3-alpine
 
 LABEL repository="https://github.com/ubient/laravel-vapor-action"
 LABEL homepage="https://github.com/ubient/laravel-vapor-action"
