@@ -8,6 +8,9 @@ LABEL maintainer="Claudio Dekker <claudio@ubient.net>"
 # https://laravel.com/docs/6.x#server-requirements
 RUN apk add libxml2-dev && \
     docker-php-ext-install bcmath xml tokenizer mbstring
+    
+# Install composer script
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 
 # Install Vapor + Prestissimo (parallel/quicker composer install)
 RUN set -xe && \
