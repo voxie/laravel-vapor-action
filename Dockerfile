@@ -13,7 +13,7 @@ RUN apk add zip unzip
 # Install required extenstions for laravel 
 # https://laravel.com/docs/6.x#server-requirements
 RUN apk add libxml2-dev && \
-    docker-php-ext-install bcmath xml tokenizer mbstring zip
+    docker-php-ext-install bcmath xml tokenizer mbstring pcntl zip
     
 # Install composer script
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
