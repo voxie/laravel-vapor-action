@@ -7,10 +7,13 @@ LABEL maintainer="Claudio Dekker <claudio@ubient.net>"
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
 
+# Install packages
+RUN apk add zip unzip
+
 # Install required extenstions for laravel 
 # https://laravel.com/docs/6.x#server-requirements
 RUN apk add libxml2-dev && \
-    docker-php-ext-install bcmath xml tokenizer mbstring
+    docker-php-ext-install bcmath xml tokenizer mbstring zip
     
 # Install composer script
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
