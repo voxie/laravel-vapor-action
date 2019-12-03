@@ -4,6 +4,7 @@ LABEL repository="https://github.com/ubient/laravel-vapor-action"
 LABEL homepage="https://github.com/ubient/laravel-vapor-action"
 LABEL maintainer="Claudio Dekker <claudio@ubient.net>"
 
+ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
 
 # Install required extenstions for laravel 
