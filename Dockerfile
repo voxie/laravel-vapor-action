@@ -8,7 +8,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
 
 # Install packages
-RUN apk add zip unzip
+RUN apk add zip unzip libzip-dev zlib-dev
 
 # Install required extenstions for laravel 
 # https://laravel.com/docs/6.x#server-requirements
