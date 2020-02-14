@@ -10,13 +10,13 @@ ENV COMPOSER_HOME /tmp
 # Install packages
 RUN apk add zip unzip libzip-dev zlib-dev
 
-# Install required extenstions for laravel 
+# Install required extenstions for laravel
 # https://laravel.com/docs/6.x#server-requirements
 RUN apk add libxml2-dev && \
-    docker-php-ext-install bcmath xml tokenizer mbstring pcntl zip
-    
+    docker-php-ext-install bcmath gd mbstring pcntl tokenizer xml zip
+
 # Install composer script
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
 # Install Vapor + Prestissimo (parallel/quicker composer install)
 RUN set -xe && \
