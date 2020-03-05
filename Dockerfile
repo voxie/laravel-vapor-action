@@ -12,7 +12,7 @@ RUN apk add zip unzip libzip-dev zlib-dev libpng-dev
 
 # Install required extenstions for laravel
 # https://laravel.com/docs/6.x#server-requirements
-RUN apk add libxml2-dev && \
+RUN apk add libxml2-dev oniguruma-dev oniguruma && \
     docker-php-ext-install bcmath gd mbstring pcntl tokenizer xml zip
 
 # Install composer script
