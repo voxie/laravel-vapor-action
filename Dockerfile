@@ -20,7 +20,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 
 # Install Vapor + Prestissimo (parallel/quicker composer install)
 RUN set -xe && \
-    composer global require hirak/prestissimo && \
     composer global require laravel/vapor-cli && \
     composer clear-cache
 
